@@ -1,0 +1,51 @@
+setenv bootargs ''
+
+dtbname=imx6sl-warp.dtb
+ramdiskname=warp-firmware.img
+
+setenv initrd_high 0xffffffff
+
+if itest.s x == x${bootdir} ; then
+	bootdir=/
+fi
+
+if itest.s x${bootpart} == x ; then
+	bootpart=1
+fi
+
+if load mmc ${mmcdev}:${bootpart} ${fdt_addr} ${bootdir}${dtbname} ; then
+	fdt addr ${fdt_addr}
+	setenv fdt_high 0xffffffff
+else
+	echo "!!!! Error loading ${bootdir}${dtbname}";
+	exit;
+fi
+
+fdt resize
+
+if itest.s x == x${baudrate} ; then
+	baudrate=115200
+fi
+
+setenv bootargs "${bootargs} console=${console},${baudrate} consoleblank=0 "
+setenv bootargs "${bootargs} root=${mmcroot}"
+
+if itest.s "x" != "x${show_fdt}" ; then
+	fdt print /
+fi
+
+if itest.s "x" != "x${show_env}" ; then
+	printenv
+fi
+
+if load mmc ${mmcdev}:${bootpart} ${initrd_addr} ${bootdir}${ramdiskname} ; then
+    if load mmc ${mmcdev}:${bootpart} ${loadaddr} /zImage ; then
+        bootz ${loadaddr} ${initrd_addr} ${fdt_addr}
+    fi
+else
+    if load mmc ${mmcdev}:${bootpart} ${loadaddr} /zImage ; then
+            bootz ${loadaddr} - ${fdt_addr}
+    fi
+fi
+
+echo "Error loading kernel image"

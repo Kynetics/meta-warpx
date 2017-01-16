@@ -1,0 +1,14 @@
+--- mini-x-session.orig	2016-02-03 10:54:36.653774999 +0000
++++ mini-x-session	2016-02-03 10:54:54.549774999 +0000
+@@ -29,11 +29,4 @@
+ 	done
+ fi
+ 
+-# This resolution is big enough for hob2's max window size.
+-xrandr -s 1024x768
+-
+-# Default files to run if $HOME/.mini_x/session or /etc/mini_x/session
+-# dont exist. 
+-
+-matchbox-terminal&
+ exec matchbox-window-manager

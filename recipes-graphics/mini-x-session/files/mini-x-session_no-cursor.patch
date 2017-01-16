@@ -1,0 +1,8 @@
+--- mini-x-session.orig	2016-07-18 16:29:12.333096015 +0200
++++ mini-x-session	2016-07-18 16:30:33.969096015 +0200
+@@ -29,4 +29,4 @@
+ 	done
+ fi
+ 
+-exec matchbox-window-manager
++exec matchbox-window-manager -use_cursor no
