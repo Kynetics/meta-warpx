@@ -5,11 +5,11 @@ require recipes-kernel/linux/linux-dtb.inc
 
 SUMMARY = "Linux kernel for WaRP board"
 
-SRC_URI = "git://git@github.com/revolution-robotics/warp-kernel.git;protocol=ssh;branch=${SRCBRANCH} \
+SRC_URI = "git://github.com/warpboard/linux-imx6.git;branch=${SRCBRANCH} \
            file://defconfig"
 
 LOCALVERSION = "-1.0.0_ga"
-SRCBRANCH = "warp/jacob/imx_4.1.15_1.0.0_ga_2.4in+epd"
-SRCREV = "254b3a0322a1836f2c50e437e12a5b9c1859dc18"
+SRCBRANCH = "warpx/imx_4.1.15_1.0.0_ga"
+SRCREV = "8ba87e523dac878c797188511d75572e63700eec"
 DEPENDS += "lzop-native bc-native"
 COMPATIBLE_MACHINE = "(warp)"
