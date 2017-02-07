@@ -1,7 +1,7 @@
 require recipes-graphics/images/core-image-x11.bb
-require wtc-2016.inc
+require warpx.inc
 
-SUMMARY = "Wearable Technologies Conference 2016 demo image with graphics"
+SUMMARY = "Warpx demo image with graphics"
 
 LICENSE := "MIT"
 
@@ -24,4 +24,4 @@ IMAGE_INSTALL_append = "\
 	g-multi-autostart \
 "
 
-export IMAGE_BASENAME = "wtc-2016-headfull-image"
+export IMAGE_BASENAME = "warpx-headfull-image"

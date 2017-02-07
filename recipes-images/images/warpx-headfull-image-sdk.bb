@@ -1,4 +1,4 @@
-require wtc-2016-headfull-image.bb
+require warpx-headfull-image.bb
 
 IMAGE_FEATURES += " \
     dev-pkgs \
@@ -11,4 +11,4 @@ EXTRA_IMAGE_FEATURES += " \
     debug-tweaks \
 "
 
-export IMAGE_BASENAME = "wtc-2016-headfull-image-sdk"
+export IMAGE_BASENAME = "warpx-headfull-image-sdk"
