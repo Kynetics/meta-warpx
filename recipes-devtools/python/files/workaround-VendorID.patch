@@ -1,0 +1,20 @@
+--- /opt/yocto_builder/build-warpx-warp/tmp/work/cortexa9hf-neon-poky-linux-gnueabi/python-pyqt/5.3.1-r1/PyQt-gpl-5.3.1/sip/QtCore/QtCoremod.sip	2014-07-04 11:09:36.000000000 +0200
++++ PyQt-gpl-5.3.1/sip/QtCore/QtCoremod.sip	2016-07-16 20:21:59.293096015 +0200
+@@ -69,7 +69,7 @@ WARRANTY OF DESIGN, MERCHANTABILITY AND
+ // Hook into the VendorID package if it is enabled.
+ %Feature VendorID
+ 
+-%If (VendorID)
++//%If (VendorID)
+ 
+ %ModuleCode
+ #include <vendorid.h>
+@@ -83,7 +83,7 @@ WARRANTY OF DESIGN, MERCHANTABILITY AND
+     }
+ %End
+ 
+-%End
++//%End
+ 
+ %End
+ 

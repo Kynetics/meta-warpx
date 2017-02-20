@@ -19,6 +19,7 @@ SRC_URI = "\
     file://qpygui.pro \
     file://dbus.pro \
     file://session_manager_feature_fix.patch \
+    file://workaround-VendorID.patch \
 "
 
 SRC_URI[md5sum] = "c24b1a4040292fcfdbf128a9a5a38e66"
@@ -31,12 +32,14 @@ B = "${S}"
 
 PARALLEL_MAKE = ""
 
+OE_QMAKE_CXXFLAGS += " -Wno-narrowing -fpermissive"
+
 QMAKE_PROFILES = "pyqt.pro"
 # NOTE: has to match with MIN(qt version we have in OE, last known Qt version by SIP/PyQt)
 EXTRA_SIPTAGS = "-tWS_X11 -t${PYQT_OE_VERSION} -xVendorID -xPyQt_Accessibility -xPyQt_Desktop_OpenGL -xPyQt_SessionManager"
 #EXTRA_OEMAKE = " MAKEFLAGS= "
 
-SIP_MODULES = "QtCore QtGui QtNetwork QtQml QtQuick QtSvg QtWebKit QtWidgets QtOpenGL QtXmlPatterns"
+SIP_MODULES = "QtCore QtGui QtQml QtQuick QtSvg QtWebKit QtWidgets QtOpenGL QtXmlPatterns"
 MAKE_MODULES = "dbus qpy/QtCore qpy/QtGui ${SIP_MODULES}"
 
 EXTRA_OECMAKE += "-DQT_NO_ACCESSIBILITY"
