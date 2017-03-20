@@ -15,3 +15,9 @@ IMAGE_INSTALL += "\
 IMAGE_INSTALL += "\
 	u-boot-fw-utils \
 "
+
+# Autostart and setup USB Gadget ethernet interface
+IMAGE_INSTALL += "\
+	modutils-initscripts \
+	init-ifupdown \
+"
