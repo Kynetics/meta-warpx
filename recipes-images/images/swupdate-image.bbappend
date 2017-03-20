@@ -1,4 +1,4 @@
-IMAGE_FSTYPES = "cpio.gz.u-boot"
+IMAGE_FSTYPES = "cpio.gz"
 
 # Install firmware and modules
 IMAGE_INSTALL += "\
