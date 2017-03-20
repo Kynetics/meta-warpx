@@ -10,3 +10,8 @@ IMAGE_INSTALL += "\
 	iw \
 	wpa-supplicant \
 "
+
+# Install U-Boot env utilities
+IMAGE_INSTALL += "\
+	u-boot-fw-utils \
+"
