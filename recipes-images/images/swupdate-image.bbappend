@@ -1,5 +1,7 @@
 IMAGE_FSTYPES = "cpio.gz"
 
+include filesystem_utils.inc
+
 # Install firmware and modules
 IMAGE_INSTALL += "\
 	${MACHINE_EXTRA_RRECOMMENDS} \

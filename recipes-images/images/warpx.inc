@@ -1,15 +1,8 @@
+include filesystem_utils.inc
+
 # ssh service
 IMAGE_FEATURES_append = "\
                 ssh-server-dropbear \
-"
-
-# filesystem utils
-IMAGE_INSTALL_append = "\
-                e2fsprogs \
-                e2fsprogs-e2fsck \
-                e2fsprogs-mke2fs \
-		e2fsprogs-resize2fs \
-                dosfstools \
 "
 
 # Low level tools
