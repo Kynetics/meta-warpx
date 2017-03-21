@@ -20,8 +20,4 @@ IMAGE_INSTALL_append = "\
 	fbgrab \
 "
 
-IMAGE_INSTALL_append = "\
-	g-multi-autostart \
-"
-
 export IMAGE_BASENAME = "warpx-headfull-image"
