@@ -1,0 +1,29 @@
+From 1207b97bfa27c985ebe8961b339a16645d661e61 Mon Sep 17 00:00:00 2001
+From: Diego Rondini <diego.rondini@kynetics.it>
+Date: Thu, 14 Jul 2016 17:17:11 +0200
+Subject: [PATCH] warp: Change default bootenv configuration
+
+Change default mmcroot to mmcblk1 in order to have a smooth boot process
+with sdcard image built from meta-fsl-arm-extra.
+
+Signed-off-by: Diego Rondini <diego.rondini@kynetics.it>
+---
+ include/configs/warp.h | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/include/configs/warp.h b/include/configs/warp.h
+index 4a8e270..495b664 100644
+--- a/include/configs/warp.h
++++ b/include/configs/warp.h
+@@ -107,7 +107,7 @@
+ 	"ip_dyn=yes\0" \
+ 	"mmcdev=0\0" \
+ 	"mmcpart=1\0" \
+-	"mmcroot=/dev/mmcblk0p2 rootwait rw\0" \
++	"mmcroot=/dev/mmcblk1p2 rootwait rw\0" \
+ 	"dfu_alt_info=boot raw 0x2 0x400 mmcpart 1\0" \
+ 	"mmcargs=setenv bootargs console=${console},${baudrate} " \
+ 		"root=${mmcroot}\0" \
+-- 
+2.9.3
+
