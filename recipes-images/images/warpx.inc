@@ -10,6 +10,7 @@ IMAGE_INSTALL_append = "\
                 i2c-tools \
                 spitools \
                 devmem2 \
+                u-boot-fw-utils \
 "
 
 # screen
