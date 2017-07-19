@@ -10,14 +10,16 @@ SRC_URI = "\
 S = "${WORKDIR}"
 
 RDEPENDS_${PN} = "\
-       python-pyqt \
-       qtbase-fonts \
-       qtbase-fonts-pfa \
-       qtbase-fonts-pfb \
-       qtbase-fonts-qpf \
-       qtbase-fonts-ttf-dejavu \
-       qtbase-fonts-ttf-vera \
+       python-pyqt5 \
        qtbase-tools \
+       ttf-dejavu-sans \
+       ttf-dejavu-sans-mono \
+       ttf-dejavu-sans-condensed \
+       ttf-dejavu-serif \
+       ttf-dejavu-serif-condensed \
+       ttf-liberation-mono \
+       ttf-liberation-sans \
+       ttf-liberation-serif \
 "
 
 do_install () {
