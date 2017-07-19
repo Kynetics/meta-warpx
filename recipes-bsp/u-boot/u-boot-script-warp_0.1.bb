@@ -15,7 +15,7 @@ BOOTSCRIPT = "${S}/bootscript.txt"
 
 do_mkimage () {
     uboot-mkimage -A arm -O linux -T script -C none -a 0 -e 0 \
-                  -n "boot script" -d ${BOOTSCRIPT} boot.scr
+                  -n "boot script" -d ${BOOTSCRIPT} ${S}/boot.scr
 }
 
 addtask mkimage after do_compile before do_install
