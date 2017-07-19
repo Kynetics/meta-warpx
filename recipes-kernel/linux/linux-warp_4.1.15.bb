@@ -10,6 +10,6 @@ SRC_URI = "git://github.com/warpboard/linux-imx6.git;branch=${SRCBRANCH} \
 
 LOCALVERSION = "-1.0.0_ga"
 SRCBRANCH = "warpx/imx_4.1.15_1.0.0_ga"
-SRCREV = "1eb031422b8caaf438d4e3ab9ff1b84eaf343543"
+SRCREV = "b0ab2eb84c055b36cac8f87d39415a4bc24d0b66"
 DEPENDS += "lzop-native bc-native"
 COMPATIBLE_MACHINE = "(warp)"
