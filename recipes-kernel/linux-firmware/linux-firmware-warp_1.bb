@@ -10,6 +10,8 @@ SRC_URI = "file://SH_nVram.txt"
 
 S = "${WORKDIR}"
 
+RDEPENDS_${PN} = "linux-firmware-bcm4330"
+
 do_install () {
         install -d ${D}/lib/firmware/brcm
 	install -m 0644 ${S}/SH_nVram.txt ${D}/lib/firmware/brcm/brcmfmac4330-sdio.txt
