@@ -11,6 +11,7 @@ IMAGE_INSTALL_append = "\
                 spitools \
                 devmem2 \
                 u-boot-fw-utils \
+                evtest \
 "
 
 # screen
