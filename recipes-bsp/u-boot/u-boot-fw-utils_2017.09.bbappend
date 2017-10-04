@@ -1,7 +1,6 @@
 FILESEXTRAPATHS_append := "${THISDIR}/${PN}:"
 
 SRC_URI += "\
-	file://0001-warp-Change-default-bootenv-configuration.patch \
 	file://fw_env.config \
 "
 
