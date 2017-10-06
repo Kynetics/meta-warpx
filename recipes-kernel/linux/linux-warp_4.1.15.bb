@@ -1,7 +1,6 @@
 # Adapted from linux-imx.inc, copyright (C) 2013, 2014 O.S. Systems Software LTDA
 
 require recipes-kernel/linux/linux-imx.inc
-require recipes-kernel/linux/linux-dtb.inc
 
 SUMMARY = "Linux kernel for WaRP board"
 
