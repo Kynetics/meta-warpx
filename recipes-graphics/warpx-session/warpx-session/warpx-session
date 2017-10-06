@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# WTC session
+# Warpx session
 #
 # Copyright (C) 2016, Kynetics LLC
 #
@@ -24,4 +24,4 @@
 
 export DISPLAY=":0"
 
-python /opt/wtc2016/main.py &
+python /opt/warpx/main.py &

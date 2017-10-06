@@ -1,4 +1,4 @@
-SUMMARY = "WTC 2016 Demo files"
+SUMMARY = "Warpx Demo files"
 
 LICENSE = "MIT"
 LIC_FILES_CHKSUM = "file://main.py;beginline=1;endline=20;md5=4ca5694ca2fbb565f5d74ab0c6c6beac"
@@ -23,8 +23,8 @@ RDEPENDS_${PN} = "\
 "
 
 do_install () {
-        install -d ${D}/opt/wtc2016/
-	install -m 0755 ${S}/main.py ${D}/opt/wtc2016/
+        install -d ${D}/opt/warpx/
+	install -m 0755 ${S}/main.py ${D}/opt/warpx/
 }
 
-FILES_${PN} = "/opt/wtc2016/*"
+FILES_${PN} = "/opt/warpx/*"

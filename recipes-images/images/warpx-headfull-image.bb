@@ -5,9 +5,9 @@ SUMMARY = "Warpx demo image with graphics"
 
 LICENSE := "MIT"
 
-# WTC session
+# Warpx session
 IMAGE_INSTALL_append = "\
-	wtc-session \
+	warpx-session \
 "
 
 # fbdev driver
